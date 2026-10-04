@@ -1,0 +1,61 @@
+.glossary-term-trigger {
+  display: inline;
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  vertical-align: baseline;
+  text-decoration: underline dotted #927aa6;
+  text-underline-offset: 4px;
+  cursor: help;
+}
+.glossary-term-trigger:hover,
+.glossary-term-trigger:focus-visible {
+  color: #654477;
+  background: #eee5f5;
+}
+.glossary-term-tooltip {
+  position: fixed;
+  inset: auto;
+  box-sizing: border-box;
+  margin: 0;
+  width: min(360px, calc(100vw - 24px));
+  max-height: calc(100dvh - 24px);
+  overflow: auto;
+  padding: 16px 18px;
+  border: 1px solid #d7c8e3;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 8px 32px #31223d26;
+  color: #51475a;
+  font-size: 14px;
+  line-height: 1.65;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: normal;
+}
+.glossary-term-tooltip strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #625075;
+  font-size: 14px;
+  font-weight: 600;
+}
+.glossary-term-tooltip code {
+  display: block;
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 5px;
+  background: #f5f1f8;
+  color: #51475a;
+  font-size: 12px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.glossary-term-code-note { display: block; margin-top: 12px; font-size: 12px; color: #687270; }
+@media print { .glossary-term-tooltip { display: none !important; } }

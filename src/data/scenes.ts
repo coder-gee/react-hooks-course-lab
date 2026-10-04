@@ -1,0 +1,135 @@
+// Public demo metadata only; no lecturer schedule or private cues.
+export const scenes = [
+  {
+    "id": "remember",
+    "comparison": "problem-fix",
+    "title": "useState · Local variables vs state",
+    "question": "The native input works. What asks React to update its summary?",
+    "before": "local",
+    "after": "state",
+    "takeaway": "State remembers a value between renders; its setter requests the next render. Native interactivity already works without Hooks.",
+    "task": "Make quantity, note, and summary read one state owner.",
+    "checkpoint": "starter",
+    "section": "section-state"
+  },
+  {
+    "id": "queue",
+    "comparison": "problem-fix",
+    "title": "useState · Batching and queued updates",
+    "question": "From 1, do two updates in one handler produce 2 or 3?",
+    "before": "direct",
+    "after": "queued",
+    "takeaway": "React batches updates until the handler finishes. Direct updates read the same snapshot; updater functions build on pending state in order.",
+    "task": "First reset quantity and note together. Then compare direct updates with updater functions.",
+    "checkpoint": "starter",
+    "section": "section-state"
+  },
+  {
+    "id": "consistent",
+    "comparison": null,
+    "title": "useState · Controlled inputs and derived values",
+    "question": "What needs memory, and what can be calculated?",
+    "before": "consistent",
+    "after": "consistent",
+    "takeaway": "Remember quantity and note once. Derive total and count during render.",
+    "task": "Build the controlled inputs and shared summary; explain the common owner.",
+    "checkpoint": "starter",
+    "section": "section-state"
+  },
+  {
+    "id": "title",
+    "comparison": null,
+    "title": "useEffect · Synchronizing the browser title",
+    "question": "What changes outside React when quantity changes?",
+    "before": "title",
+    "after": "title",
+    "takeaway": "The Effect reads reactive quantity, so quantity belongs in its dependency list.",
+    "task": "Observe the browser title and explain render versus event versus Effect.",
+    "checkpoint": "state",
+    "section": "section-effects"
+  },
+  {
+    "id": "sync",
+    "comparison": "problem-fix",
+    "title": "useEffect · Flash sale timer cleanup",
+    "question": "Unmount the countdown banner. Should its interval keep ticking?",
+    "before": "leakingTimer",
+    "after": "cleanedTimer",
+    "takeaway": "Unmount removes the countdown banner. Cleanup must stop its interval too; a fresh banner starting at 30 does not prove that old timers stopped.",
+    "task": "In Checkout Lab, return the timer cleanup. Review order unmounts its timer child; Edit details mounts a fresh one.",
+    "checkpoint": "repair-sync",
+    "section": "section-effects"
+  },
+  {
+    "id": "focus",
+    "comparison": null,
+    "title": "useRef · Focusing an input",
+    "question": "When does the note field receive focus, and how does the Effect reach it?",
+    "before": "focus",
+    "after": "focus",
+    "takeaway": "State holds displayed text. A ref holds the DOM node; an Effect focuses it after mount.",
+    "task": "Attach a ref and focus the note after mount while preserving controlled text.",
+    "checkpoint": "sync",
+    "section": "section-refs"
+  },
+  {
+    "id": "reducer",
+    "comparison": null,
+    "title": "useReducer · Updating state with actions",
+    "question": "After quantity, note, and reset actions, what should the cart contain?",
+    "before": "reducer",
+    "after": "reducer",
+    "takeaway": "Events dispatch actions; a pure reducer returns next state. It organizes state updates rather than creating a duplicate cart.",
+    "task": "Implement reset, explain why the commented mutation is wrong, and keep totals derived.",
+    "checkpoint": "reducer",
+    "section": "section-reducer"
+  },
+  {
+    "id": "context",
+    "comparison": null,
+    "title": "useContext · Sharing values across components",
+    "question": "How do currency, language and theme consumers read the same preferences without props at every level?",
+    "before": "context",
+    "after": "context",
+    "takeaway": "SettingsProvider owns currency, theme and language. useContext reads its nearest value; intermediate layout components do not pass preferences.",
+    "task": "Connect the Settings provider value, then change currency, theme and language.",
+    "checkpoint": "context",
+    "section": "section-context"
+  },
+  {
+    "id": "custom",
+    "comparison": null,
+    "title": "Custom Hooks · Reusing stateful logic",
+    "question": "If we stop First, will Second keep counting?",
+    "before": "custom",
+    "after": "custom",
+    "takeaway": "useCountdown composes state, a timer ref, and an Effect. Each call owns its seconds and interval.",
+    "task": "Extract the countdown Hook, then stop, restart and unmount its independent callers.",
+    "checkpoint": "custom",
+    "section": "section-custom"
+  },
+  {
+    "id": "memo",
+    "comparison": "optimization",
+    "title": "useMemo · Caching a calculation",
+    "question": "Should changing the note repeat a filter whose offers and search are unchanged?",
+    "before": "uncached",
+    "after": "memo",
+    "takeaway": "useMemo can reuse a calculation result while dependencies are unchanged. It is an optimization, not a correctness requirement.",
+    "task": "Search for backpack, then edit the unrelated note. Compare the filter code in both versions; the total is a match count, and only the first five matches are shown. This is not a speed benchmark.",
+    "optional": true,
+    "section": "section-optimization"
+  },
+  {
+    "id": "callback",
+    "comparison": "optimization",
+    "title": "useCallback · Keeping a function reference stable",
+    "question": "Does a theme change need to render ShippingForm again?",
+    "before": "unstable",
+    "after": "callback",
+    "takeaway": "useCallback can retain a function reference. It helps this memoized child only when its other inputs remain stable.",
+    "task": "Toggle theme, change product or referrer, then fill the address and submit locally. Compare ShippingForm console logs in Run and Fix.",
+    "optional": true,
+    "section": "section-optimization"
+  }
+];

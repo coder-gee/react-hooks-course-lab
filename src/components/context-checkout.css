@@ -1,0 +1,73 @@
+/* Supplied checkout-only palette; course chrome and standalone demo are unchanged. */
+.context-checkout {
+  --context-shop-bg: #fbfaff;
+  --context-shop-card: #ffffff;
+  --context-shop-inset: #f1eef8;
+  --context-shop-ink: #30293f;
+  --context-shop-muted: #655b75;
+  --context-shop-border: #d7d0e3;
+  --context-shop-accent: #6246a0;
+  --context-shop-button: #7055bd;
+  --context-shop-button-hover: #5c429f;
+}
+.context-checkout[data-theme="dark"] {
+  color-scheme: dark;
+  --context-shop-bg: #171b2c;
+  --context-shop-card: #22283d;
+  --context-shop-inset: #2d354d;
+  --context-shop-ink: #f3f0fc;
+  --context-shop-muted: #c3bdd5;
+  --context-shop-border: #4b536e;
+  --context-shop-accent: #d0baff;
+  --context-shop-button: #7357be;
+  --context-shop-button-hover: #6245ab;
+}
+.checkout-page .context-checkout .game-store {
+  background: var(--context-shop-bg);
+  color: var(--context-shop-ink);
+  border-color: var(--context-shop-border);
+}
+.checkout-page .context-checkout .game-store .checkout-main { background: transparent; }
+.checkout-page .context-checkout .game-store :is(.order-summary, .gift-box, .review-detail) {
+  background: var(--context-shop-card);
+  color: var(--context-shop-ink);
+  border-color: var(--context-shop-border);
+}
+.checkout-page .context-checkout .game-store :is(.section-label h2, .product-copy h2, .field, .checkbox, .bundle-contents b, .summary-lines strong, .summary-total strong, .stepper output) {
+  color: var(--context-shop-ink);
+}
+.checkout-page .context-checkout .game-store :is(.muted, .field > span, .field small, .checkbox small, .product-copy > p, .bundle-contents small, .summary-lines > div, .summary-note p, .summary-total, .review-detail p, .checkout-progress > span) {
+  color: var(--context-shop-muted);
+}
+.checkout-page .context-checkout .game-store :is(.section-label > span, .product-copy .eyebrow, .text-button, .summary-actions button, .gift-symbol, .checkout-progress > span.active) {
+  color: var(--context-shop-accent);
+}
+.checkout-page .context-checkout .game-store :is(.field textarea, .field input[type="number"]) {
+  background: var(--context-shop-bg);
+  color: var(--context-shop-ink);
+  border-color: var(--context-shop-border);
+}
+.checkout-page .context-checkout .game-store .field textarea::placeholder { color: var(--context-shop-muted); }
+.checkout-page .context-checkout .game-store :is(textarea, button, input):focus-visible {
+  outline: 3px solid var(--context-shop-accent);
+  outline-offset: 3px;
+}
+.checkout-page .context-checkout .game-store :is(.stepper, .summary-total, .summary-actions, .checkout-progress b) { border-color: var(--context-shop-border); }
+.checkout-page .context-checkout .game-store :is(.stepper button, .product-copy .contents-caption) {
+  background: var(--context-shop-inset);
+  color: var(--context-shop-ink);
+}
+.checkout-page .context-checkout .game-store .stepper button:hover { background: var(--context-shop-border); }
+.checkout-page .context-checkout .game-store .button.primary {
+  background: var(--context-shop-button);
+  border-color: var(--context-shop-button);
+  color: #ffffff;
+}
+.checkout-page .context-checkout .game-store .button.primary:hover { background: var(--context-shop-button-hover); }
+.checkout-page .context-checkout .game-store .checkout-progress b { color: var(--context-shop-muted); }
+.checkout-page .context-checkout .game-store .checkout-progress > span.active b {
+  background: var(--context-shop-button);
+  border-color: var(--context-shop-button);
+  color: #ffffff;
+}
+.checkout-page .context-checkout .game-store .checkbox input { accent-color: var(--context-shop-button); }

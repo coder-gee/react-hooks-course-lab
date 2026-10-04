@@ -1,0 +1,50 @@
+/* Keep the lesson picker in page coordinates during device emulation.
+   Browsers without customizable selects retain their native control. */
+@supports (appearance: base-select) {
+  select.lesson-picker,
+  select.lesson-picker::picker(select) {
+    appearance: base-select;
+  }
+  select.lesson-picker {
+    width: 340px;
+    min-width: 0;
+    max-width: 100%;
+    padding-right: 12px;
+    align-items: center;
+  }
+  select.lesson-picker::picker(select) {
+    position: fixed;
+    inset: auto;
+    top: anchor(bottom);
+    left: anchor(left);
+    position-try-fallbacks: flip-inline, flip-block, flip-block flip-inline;
+    min-width: anchor-size(width);
+    width: max-content;
+    max-width: min(430px, calc(100vw - 24px));
+    max-height: min(420px, 65vh);
+    margin: 4px 0 0;
+    overflow-y: auto;
+    border: 1px solid #cdd5cf;
+    border-radius: 6px;
+    background: white;
+    color: #26342d;
+    box-shadow: 0 8px 24px #18201f26;
+    padding: 4px;
+    font: inherit;
+  }
+  select.lesson-picker option {
+    padding: 9px 12px;
+    white-space: normal;
+    border-radius: 3px;
+  }
+  select.lesson-picker option:hover,
+  select.lesson-picker option:focus-visible {
+    background: #e9ede5;
+    outline: none;
+  }
+  select.lesson-picker option:checked {
+    background: #eee9fa;
+    color: #4a3878;
+    font-weight: 600;
+  }
+}

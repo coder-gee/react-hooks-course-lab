@@ -1,0 +1,25 @@
+.homework-assignment { margin: 1.5rem 0; }
+.homework-brief { max-width: 900px; margin: 0 auto 2rem; padding: clamp(1rem, 3vw, 2rem); background: white; border: 1px solid #d8dde3; border-radius: 16px; color: #202b36; line-height: 1.65; }
+.homework-brief h1 { font-size: clamp(1.6rem, 3vw, 2.25rem); line-height: 1.2; margin: .6rem 0 1rem; }
+.homework-brief h2 { font-size: 1.2rem; margin: 1.6rem 0 .6rem; }
+.homework-brief li { margin: .6rem 0; }
+.homework-brief code { overflow-wrap: anywhere; font-size: .9em; }
+.homework-brief details { border: 1px solid #d8dde3; border-radius: 8px; padding: 1rem; margin-top: 1.5rem; }
+.homework-brief summary { cursor: pointer; font-weight: 600; }
+.homework-preview-controls { max-width: 900px; margin: 0 auto 1.5rem; }
+.homework-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1rem 0; }
+
+.homework-table-wrap { overflow-x: auto; }
+.homework-hook-table { border-collapse: collapse; width: 100%; text-align: left; }
+.homework-hook-table th, .homework-hook-table td { border-bottom: 1px solid #d8dde3; padding: .7rem; vertical-align: top; }
+.homework-hook-table th:first-child, .homework-hook-table td:first-child { white-space: nowrap; }
+
+/* Homework-only rhythm: separate explanations, controls, list rows and summary. */
+.homework-preview-controls > h1 { margin: 1rem 0 .65rem; line-height: 1.25; }
+.homework-preview-controls > a { display: inline-block; margin-bottom: .65rem; }
+.homework-preview-controls > p { margin: .65rem 0 1.15rem; line-height: 1.6; }
+
+.homework-draft-fields { border: 0; padding: 0; margin: 1.5rem 0; display: grid; gap: 1rem; }
+.homework-draft-fields legend { font-weight: 600; margin-bottom: 1rem; }
+.homework-restore { padding: 1rem; border: 1px solid #b9c9bf; border-radius: 8px; background: #eef4ef; }
+.homework-restore h3 { margin-top: 0; }

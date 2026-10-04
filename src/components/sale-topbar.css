@@ -1,0 +1,16 @@
+.sale-topbar {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding: 9px 14px;
+  border: 1px solid #ffe6a1;
+  border-radius: 7px;
+  background: #ffcc57;
+  color: #382006;
+  box-shadow: 0 2px 12px #ffcc5726;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.sale-topbar output { margin-left: 5px; font-size: 18px; font-variant-numeric: tabular-nums; }

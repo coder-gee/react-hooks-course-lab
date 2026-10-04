@@ -1,0 +1,9 @@
+.stage-terminology { margin-top: 15px; color: #51475a; }
+.stage-terminology h3 { margin: 0 0 7px; font-size: 13px; font-weight: 600; line-height: 1.6; }
+.stage-terminology h3 span { font-weight: 400; color: #687270; }
+.stage-terminology ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.stage-terminology li { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; font-size: 14px; line-height: 1.65; }
+.stage-term-location { color: #52645c; font-size: 12px; min-width: 54px; }
+a.stage-term-location { text-decoration: underline; text-underline-offset: 3px; }
+.stage-term-list { display: flex; flex-wrap: wrap; gap: 3px 12px; }
+.guide-current > .stage-terminology { margin-bottom: 22px; }

@@ -1,0 +1,15 @@
+.optimization-demo { display: grid; gap: 16px; padding: 22px; border: 1px solid #d8dfd4; border-radius: 10px; background: #fafcf8; }
+.optimization-demo p { margin: 0; }
+.optimization-task { font-weight: 600; line-height: 1.5; }
+.optimization-demo label { display: grid; gap: 8px; }
+.optimization-demo input { width: 100%; min-width: 0; padding: 11px 12px; border: 1px solid #9eaea3; border-radius: 6px; background: #fff; color: #25332c; font: inherit; }
+.optimization-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+.optimization-metrics > div, .optimization-child { display: grid; gap: 8px; border: 1px solid #cbd8ce; border-radius: 7px; padding: 16px; background: #edf4ee; }
+.optimization-metrics output, .optimization-child output { font-size: 25px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.optimization-metrics span { font-size: 13px; line-height: 1.45; }
+.optimization-demo .fineprint { font-size: 13px; line-height: 1.5; color: #52655a; }
+
+.shipping-page { padding: 16px; border-radius: 8px; background: #f4f7f5; color: #25372c; }
+.shipping-page[data-theme="dark"] { background: #20332b; color: #f5faf6; }
+.shipping-page[data-theme="dark"] .optimization-child { background: #30473b; color: #f5faf6; }
+.shipping-page h3 { margin-top: 0; }

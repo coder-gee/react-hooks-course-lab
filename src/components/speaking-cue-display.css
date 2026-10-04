@@ -1,0 +1,9 @@
+.speaking-cue-toggle { margin-left: auto; }
+.speaking-cue-toggle[aria-pressed="true"] { background: #e9e1f3; border-color: #8063a3; color: #48315f; }
+.speaking-cue-expanded { display: block; max-width: 72ch; }
+.speaking-cue-expanded p { margin: .4rem 0 .8rem; line-height: 1.65; }
+.guide-speaking-cues:has(.speaking-cue-expanded) { display: grid; gap: .8rem; }
+.course-flow-cues ul:has(.speaking-cue-expanded) { display: grid; gap: .8rem; }
+
+.speaking-cue-panel-header { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem; margin-bottom: .85rem; }
+.speaking-cue-panel-header h3 { margin: 0; }

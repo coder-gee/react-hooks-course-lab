@@ -1,0 +1,20 @@
+.contextual-terms {
+  margin-top: 24px;
+  padding-top: 14px;
+  border-top: 1px solid #d9e0da;
+  color: #51475a;
+}
+.contextual-terms-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px 16px;
+  margin-bottom: 8px;
+}
+.contextual-terms-heading h2 { margin: 0; font-size: 14px; font-weight: 600; }
+.contextual-terms-heading h2 span { font-size: 13px; font-weight: 400; color: #687270; }
+.contextual-terms-heading a { font-size: 13px; color: #625075; text-underline-offset: 3px; }
+.contextual-terms ul { display: flex; flex-wrap: wrap; gap: 6px 18px; list-style: none; margin: 0; padding: 0; }
+.contextual-terms li { font-size: 14px; line-height: 1.65; }
+@media print { .contextual-terms { display: none !important; } }

@@ -1,0 +1,21 @@
+.glossary-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 32px 60px;
+}
+.glossary-page h1 { margin: 0 0 6px; font-size: 25px; font-weight: 600; }
+.glossary-intro { margin: 0 0 24px; color: #52604e; font-size: 16px; }
+.glossary-terms { display: grid; grid-template-columns: minmax(0, 1fr); gap: 26px; }
+.glossary-terms > div { border-top: 1px solid var(--line); padding-top: 18px; }
+.glossary-terms dt { font-size: 19px; font-weight: 600; color: #625075; }
+.glossary-terms dd { margin: 0; }
+.glossary-terms p { font-size: 16px; line-height: 1.65; margin: 10px 0 0; }
+.glossary-meaning { font-weight: 600; }
+.glossary-terms pre { background: #eeedf1; border-radius: 5px; padding: 14px; font-size: 14px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .glossary-page { padding: 24px 20px 40px; }
+  .glossary-terms { grid-template-columns: minmax(0, 1fr); }
+}
+
+.glossary-terms .glossary-code-note { color: #52604e; font-size: 13px; line-height: 1.6; margin-top: 14px; }
+.glossary-example pre { margin-top: 6px; }

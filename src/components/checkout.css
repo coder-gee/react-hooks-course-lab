@@ -1,0 +1,208 @@
+/* Modest readability improvements inside the shop; preserve the teaching controls. */
+.checkout-page .game-store {
+  --checkout-body: 16px;
+  --checkout-detail: 14px;
+  --checkout-label: 14px;
+  --checkout-ink: #30283f;
+  --checkout-muted: #5f536b;
+  font-size: var(--checkout-body);
+  line-height: 1.5;
+}
+.checkout-page .game-store .button,
+.checkout-page .game-store .text-button,
+.checkout-page .game-store .summary-actions button {
+  font-size: var(--checkout-detail);
+  min-height: 44px;
+  white-space: normal;
+}
+.checkout-page .game-store .store-heading {
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.checkout-page .game-store .store-wordmark {
+  font-size: 24px;
+}
+.checkout-page .game-store .store-wordmark small {
+  font-size: var(--checkout-label);
+  letter-spacing: 3px;
+  line-height: 1.2;
+}
+.checkout-page .webshop-label,
+.checkout-page .player-chip small,
+.checkout-page .game-store .store-footer > span {
+  font-size: var(--checkout-label);
+  color: #c0c9e1;
+  letter-spacing: 1px;
+}
+.checkout-page .player-chip {
+  font-size: var(--checkout-detail);
+}
+.checkout-page .player-avatar {
+  flex-shrink: 0;
+  font-size: 16px;
+  width: 44px;
+  height: 44px;
+}
+.checkout-page .shop-checkout-heading h2,
+.checkout-page .game-store .section-label h2,
+.checkout-page .game-store .product-copy h2 {
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--checkout-ink);
+}
+.checkout-page .game-store .checkout-progress {
+  flex-wrap: wrap;
+  gap: 20px 32px;
+}
+.checkout-page .game-store .checkout-progress > span {
+  font-size: var(--checkout-detail);
+  color: var(--checkout-muted);
+}
+.checkout-page .game-store .checkout-progress b {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  font-size: var(--checkout-label);
+}
+.checkout-page .game-store .checkout-progress > span.active {
+  color: #51418b;
+  font-weight: 600;
+}
+.checkout-page .game-store .checkout-grid {
+  grid-template-columns: minmax(0, 1.22fr) minmax(0, 1fr);
+}
+.checkout-page .game-store .checkout-main,
+.checkout-page .order-summary {
+  min-width: 0;
+  max-width: none;
+}
+.checkout-page .player-delivery {
+  flex-wrap: wrap;
+}
+.checkout-page .player-delivery > div:nth-child(2) {
+  min-width: 0;
+  flex: 1;
+}
+.checkout-page .player-delivery strong {
+  font-size: var(--checkout-body);
+  overflow-wrap: anywhere;
+}
+.checkout-page .player-delivery > div:nth-child(2) > span,
+.checkout-page .player-delivery p,
+.checkout-page .demo-account-tag,
+.checkout-page .delivery-avatar > span,
+.checkout-page .game-store .section-label > span,
+.checkout-page .game-store .field > span,
+.checkout-page .game-store .field small,
+.checkout-page .game-store .product-copy .eyebrow,
+.checkout-page .shop-checkout-heading .eyebrow,
+.checkout-page .game-store .connection small,
+.checkout-page .game-store .checkbox small,
+.checkout-page .bundle-contents small,
+.checkout-page .game-store .product-copy .contents-caption {
+  font-size: var(--checkout-label);
+  color: var(--checkout-muted);
+  line-height: 1.5;
+}
+.checkout-page .delivery-avatar > span {
+  min-width: 24px;
+  color: #2e503d;
+}
+.checkout-page .game-store .field,
+.checkout-page .game-store .muted,
+.checkout-page .game-store .product-copy > p,
+.checkout-page .game-store .native-details,
+.checkout-page .game-store .checkbox,
+.checkout-page .game-store .review-detail,
+.checkout-page .game-store .review-detail p,
+.checkout-page .game-store .confirmation > p,
+.checkout-page .game-store .summary-lines > div,
+.checkout-page .game-store .summary-note p,
+.checkout-page .game-store .summary-total,
+.checkout-page .bundle-contents b {
+  font-size: var(--checkout-body);
+  color: var(--checkout-ink);
+  line-height: 1.5;
+}
+.checkout-page .game-store .summary-lines strong {
+  color: var(--checkout-ink);
+  white-space: nowrap;
+}
+.checkout-page .game-store .field textarea {
+  height: 90px;
+  min-height: 75px;
+}
+.checkout-page .game-store .field textarea::placeholder {
+  color: #716579;
+  opacity: 1;
+}
+.checkout-page .game-store .field input,
+.checkout-page .game-store .field textarea {
+  color: var(--checkout-ink);
+}
+.checkout-page .stepper {
+  width: 180px;
+}
+.checkout-page .stepper button {
+  width: 52px;
+  height: 48px;
+  font-size: 24px;
+}
+.checkout-page .stepper output {
+  font-size: 22px;
+  color: var(--checkout-ink);
+}
+.checkout-page .game-store .scaffold-note {
+  font-size: var(--checkout-detail);
+  color: #645327;
+}
+.checkout-page .game-store .scaffold-note b {
+  color: #56441d;
+}
+.checkout-page .game-store .text-button,
+.checkout-page .game-store .summary-actions button {
+  color: #624581;
+}
+.checkout-page .game-store .connection {
+  color: #3f604c;
+}
+.checkout-page .game-store .connection.offline {
+  color: #8a491b;
+}
+.checkout-page .game-store .summary-total {
+  padding-bottom: 22px;
+}
+.checkout-page .game-store .summary-total strong {
+  font-size: 28px;
+  color: #503463;
+}
+.checkout-page .pack-type {
+  font-size: var(--checkout-label);
+  color: #f0eeff;
+  background: #222344;
+}
+.checkout-page .loot-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+}
+.checkout-page .game-store .store-footer > span:last-child {
+  margin-left: 0;
+}
+
+@media (max-width: 720px) {
+  .checkout-page .game-store .checkout-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .checkout-page .toolbar-actions select {
+    min-width: 0;
+    flex: 1;
+    width: 0;
+  }
+  .checkout-page .demo-account-tag {
+    white-space: normal;
+  }
+  .checkout-page .summary-lines > div {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,21 @@
+import { afterEach, expect, it, vi } from "vitest";
+import { cleanup, render, screen, fireEvent } from "@testing-library/react";
+import App from "./App";
+afterEach(() => { cleanup(); vi.restoreAllMocks(); });
+it("offers the dependency comparison only in the cleanup lab without changing its starter", () => {
+  vi.spyOn(window, "scrollTo").mockImplementation(() => {});
+  window.history.replaceState({}, "", "/checkout?checkpoint=repair-sync");
+  render(<App />);
+  const summary = screen.getByText("Effect dependencies: which form fits the job?");
+  const guide = summary.closest("details")!;
+  expect(guide.open).toBe(false);
+  fireEvent.click(summary);
+  expect(guide.open).toBe(true);
+  expect(screen.getByRole("region", { name: "No dependency argument" })).toBeTruthy();
+  expect(screen.getByRole("region", { name: "Empty array: []" })).toBeTruthy();
+  expect(screen.getByRole("region", { name: "Specific values: [quantity, currency]" })).toBeTruthy();
+  cleanup();
+  window.history.replaceState({}, "", "/checkout?checkpoint=starter");
+  render(<App />);
+  expect(screen.queryByText("Effect dependencies: which form fits the job?")).toBeNull();
+});

@@ -1,0 +1,12 @@
+.settings-controls { display:flex; flex-wrap:wrap; gap:18px; margin:18px 0; }
+.settings-controls label { display:grid; gap:6px; font-size:14px; color:#52665c; }
+.settings-controls select { min-width:140px; padding:10px 12px; border:1px solid #bdccc4; border-radius:6px; background:white; color:#18201f; }
+.settings-preview { display:grid; grid-template-columns:1fr; gap:18px; padding:22px; border-radius:12px; background:#edf3ee; color:#18201f; }
+.settings-preview[data-theme="dark"] { background:#172226; color:#eef6f2; }
+.settings-card { padding:20px; border:1px solid #7c978c66; border-radius:8px; }
+.settings-card h3 { margin:0 0 16px; font-size:18px; }
+.settings-card output { font-size:32px; font-weight:600; }
+.settings-card p { color:inherit; opacity:.75; }
+@media (max-width:600px) { .settings-preview { grid-template-columns:1fr; } }
+
+.settings-currency { display:block; margin:12px 0; font-weight:600; }
